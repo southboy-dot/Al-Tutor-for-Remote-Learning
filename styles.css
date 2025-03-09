@@ -1,0 +1,337 @@
+:root {
+    --primary-color: #0070f3;
+    --secondary-color: #0069d9;
+    --light-bg: #ffffff;
+    --dark-bg: #181818;
+    --light-text: #333333;
+    --dark-text: #f0f0f0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-bg);
+    color: var(--light-bg);
+    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+}
+
+header {
+    background-color: var(--light-bg);
+    color: var(--dark-bg);
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px; /* Add space below the header */
+}
+.head {
+    color:#181818;
+}
+
+.logo {
+    max-width: 70px;
+    vertical-align: middle;
+}
+.h22{
+    color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p {
+    color: whitesmoke;
+}
+
+h2 {
+    color: whitesmoke;
+}
+h3 {
+    color: whitesmoke;
+}
+.pp{
+    color: wheat;
+    display: flex;
+}
+
+label {
+    font-weight: bold;
+    color: #181818;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: border 0.3s;
+}
+input:focus {
+    border-color: #0070f3;
+    outline: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Background animation */
+@keyframes backgroundAnimation {
+    0% {
+        background-color: #f5f7fa;
+    }
+    50% {
+        background-color: #c3cfe2;
+    }
+    100% {
+        background-color: #f5f7fa;
+    }
+}
+
+.user-info , h1{
+    color: #181818;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+nav ul {
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #333333;
+    border-radius: 25px;
+    padding: 0.30rem;
+}
+
+#user-info {
+    background: #767171;
+    color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+    margin: 20px auto; /* Center horizontally and add margin at the top */
+    animation: fadeIn 1s ease-in-out;
+}
+
+#answer-area {
+    display: none;
+    /* Initially hidden */
+    background: (var(--light-bg));
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    flex-direction: column;
+}
+
+#income {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #181818;
+    border-radius: 4px;
+    max-height: 300px;
+    /* Limit height */
+    color: #181818;
+    background-color: #ffffff;
+}
+
+.message {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+    line-height: 1.5;
+}
+
+.incoming {
+    background-color: #e1f5fe;
+    text-align: left;
+}
+
+.outgoing {
+    background-color: #c8e6c9;
+    text-align: right;
+}
+
+#input-area {
+    display: flex;
+    margin-top: 10px;
+}
+
+#data-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    transition: border-color 0.3s;
+}
+
+#data-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+/* Adjust the send button styling */
+#sendbtn {
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Vertical and horizontal padding */
+    border-radius: 25px; /* Rounded corners */
+    background-color: #0070f3; /* Primary color */
+    color: white; /* Text color */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth hover effect */
+    margin: 20px auto; /* Centering the button */
+    display: block; /* Make it a block element for centering */
+}
+
+#sendbtn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+#sendbtn:focus {
+    outline: none; /* Remove default outline */
+}
+
+/* Ensure input styling is consistent */
+#input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ccc; /* Ensure border is visible */
+    border-radius: 5px;
+    margin-right: 10px; /* Space between input and button */
+    transition: border-color 0.3s;
+}
+
+#input:focus {
+    border-color: #0070f3; /* Change border color on focus */
+    outline: none;
+}
+
+.submitbtn {
+    border: oldlace;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: #0070f3;
+    color: #181818;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 150px;
+}
+
+.submitbtn:hover {
+    background-color: #0056b3;
+}
+.developer-card {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.developer-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+    display: flex; /* Align image and text horizontally */
+    align-items: center; /* Center items vertically */
+    gap: 1rem; /* Space between image and text */
+    padding: 1rem; /* Add padding for better click area */
+    border-radius: 8px; /* Match the card's border radius */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.developer-link:hover {
+    background-color: rgba(0, 113, 243, 0.307); /* Light blue background on hover */
+}
+
+.developer-image {
+    width: 60px; /* Set image width */
+    height: 60px; /* Set image height */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image fits well */
+    border: 2px solid var(--primary-color); /* Add a border */
+}
+
+.school-card {
+    margin-bottom: 1.5rem;
+}
+
+.school-card h3 {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.department {
+    padding-left: 1rem;
+    border-left: 2px solid var(--primary-color);
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.back-home-btn {
+    background-color: #0070f3; /* Primary color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Vertical and horizontal padding */
+    border: none; /* Remove default border */
+    border-radius: 25px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth hover effect */
+    margin: 20px auto; /* Centering the button */
+    display: block; /* Make it a block element for centering */
+}
+
+.back-home-btn:hover {
+    background-color: #181818; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.back-home-btn:focus {
+    outline: none; /* Remove default outline */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: #f0f0f0;
+    margin-top: auto; /* Pushes the footer to the bottom */
+    width: 100%; /* Ensure it takes the full width */
+}
+footer p {
+    color: #f0f0f0;
+}

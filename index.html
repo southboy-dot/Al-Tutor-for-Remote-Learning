@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Learning Tutor - UNIVERSITY OF JUBA</title>
+    <link rel="icon" href="bot.jpg" type="image/jpg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="bot.jpg" alt="UNIVERSITY OF JUBA Logo" class="logo">
+        <h1 class="head">AI Learning Tutor  UNIVERSITY OF JUBA</h1>
+        <nav>
+            <ul>
+                <li><a href="#user-info" onclick="showSection('user-info')">Home</a></li>
+                <li><a href="#aboutSection" onclick="showSection('aboutSection')">About</a></li>
+                <li><a href="#servicesSection" onclick="showSection('servicesSection')">Services</a></li>
+                <li><a href="#schoolsSection" onclick="showSection('schoolsSection')">Schools</a></li>
+                <li><a href="#developersSection" onclick="showSection('developersSection')">Developers</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="user-info">
+            <h1>Welcome</h1>
+            <h2 class="h22">To AI Tutor for Remote Learning</h2>
+            <p class="pp">Our AI Tutor is designed to help you with your studies. To get started please provide your details below.</p>
+            <form id="user-form" onsubmit="showAnswerArea(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="class">Class:</label>
+                <input type="text" id="class" name="class" required><br><br>
+                <button class="submitbtn" type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="answer-area" class="answer" style="display:none;">
+            <div id="income"></div>
+            <div id="input-area">
+                <input type="text" id="input" placeholder="Ask anything">
+                <button id="sendbtn">Send</button>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <div id="aboutSection" class="container" style="display:none;">
+            <h2 class="welcome-heading">About the AI Tutor</h2>
+            <div class="inner-card">
+                <p class="mb-4">The University of Juba AI Tutor is a cutting-edge educational tool designed to support students in their academic journey. Our AI-powered learning assistant provides instant answers to academic questions across various disciplines.</p>
+                
+                <h3 class="text-lg font-bold mb-2">How It Works</h3>
+                <p class="mb-4">The AI Tutor uses advanced natural language processing technology to understand your questions and generate comprehensive, educational responses.</p>
+                
+                <h3 class="text-lg font-bold mb-2">Benefits for Students</h3>
+                <ul class="list-disc pl-5 mb-4">
+                    <li>24/7 access to educational support</li>
+                    <li>Instant answers to complex academic questions</li>
+                    <li>Structured explanations with examples</li>
+                    <li>Support for all University of Juba courses</li>
+                    <li>Enhanced learning experience</li>
+                </ul>
+                
+                <h3 class="text-lg font-bold mb-2">Our Mission</h3>
+                <p>To empower University of Juba students with accessible, high-quality educational support that enhances learning outcomes and academic success.</p>
+            </div>
+            <button id="backToHomeFromAbout" class="back-home-btn" onclick="showSection('user-info')"> 
+                Back to Home
+            </button>
+        </div>
+
+        <!-- Services Section -->
+        <div id="servicesSection" class="container" style="display:none;">
+            <h2 class="welcome-heading">Our Services</h2>
+            <div class="inner-card mb-4">
+                <h3 class="text-lg font-bold mb-2">Academic Question Answering</h3>
+                <p>Get comprehensive answers to questions from any academic field, with detailed explanations and examples.</p>
+            </div>
+            <div class="inner-card mb-4">
+                <h3 class="text-lg font-bold mb-2">Subject-Specific Support</h3>
+                <p>Receive subject-specific assistance in various disciplines, including computer science, engineering, medicine, and more.</p>
+            </div>
+            <div class="inner-card mb-4">
+                <h3 class="text-lg font-bold mb-2">24/7 Availability</h3>
+                <p>Access our AI Tutor anytime, anywhere, for instant educational support whenever you need it.</p>
+            </div>
+            <div class="inner-card mb-4">
+                <h3 class="text-lg font-bold mb-2">Personalized Learning</h3>
+                <p>Receive tailored educational content based on your academic needs and learning preferences.</p>
+            </div>  
+            <button id="backToHomeFromServices" class="back-home-btn" onclick="showSection('user-info')">Back to Home</button>
+        </div>
+
+        <!-- Schools Section -->
+        <div id="schoolsSection" class="container" style="display:none;">
+            <h2 class="welcome-heading">Schools and Departments</h2>
+            <div class="school-card">
+                <h3>College of Computer Science & Information Technology</h3>
+                <div class="department">Department of Computer Science</div>
+                <div class="department">Department of Information Technology</div>
+                <div class="department">Department of Cyber Security</div>
+                <div class="department">Department of Artificial Intelligence</div>
+            </div>
+            <div class="school-card">
+                <h3>College of Engineering</h3>
+                <div class="department">Department of Civil Engineering</div>
+                <div class="department">Department of Electrical Engineering</div>
+                <div class="department">Department of Mechanical Engineering</div>
+                <div class="department">Department of Chemical Engineering</div>
+            </div>
+            <div class="school-card">
+                <h3>College of Medicine</h3>
+                <div class="department">Department of Medicine</div>
+                <div class="department">Department of Nursing</div>
+                <div class="department">Department of Pharmacy</div>
+                <div class="department">Department of Public Health</div>
+            </div>
+            <div class="school-card">
+                <h3>College of Business & Economics</h3>
+                <div class="department">Department of Business Administration</div>
+                <div class="department">Department of Economics</div>
+                <div class="department">Department of Accounting</div>
+                <div class="department">Department of Finance</div> 
+            </div>
+            <div class="school-card">
+                <h3>College of Law</h3>
+                <div class="department">Department of Law</div>
+                <div class="department">Department of Human Rights</div>
+                <div class="department">Department of International Law</div>
+                <div class="department">Department of Criminal Justice</div>
+            </div>
+            <div class="school-card">
+                <h3>College of Agriculture & Environmental Sciences</h3>
+                <div class="department">Department of Agriculture</div>
+                <div class="department">Department of Environmental Science</div>
+                <div class="department">Department of Forestry</div>
+                <div class="department">Department of Animal Science</div>
+            </div>
+            <div class="school-card">
+                <h3>College of Education</h3>
+                <div class="department">Department of Education</div>
+                <div class="department">Department of Curriculum Development</div>
+                <div class="department">Department of Educational Psychology</div>
+                <div class="department">Department of Special Education</div>
+            </div>
+            <div class="school-card">
+                <h3>College of Social Sciences & Humanities</h3>
+                <div class="department">Department of Sociology</div>
+                <div class="department">Department of Psychology</div>
+                <div class="department">Department of History</div>
+                <div class="department">Department of Political Science</div>
+            </div>
+            <div class="school-card">
+                <h3>College of Health Sciences</h3>
+                <div class="department">Department of Public Health</div>
+                <div class="department">Department of Nursing</div>
+                <div class="department">Department of Medicine</div>
+                <div class="department">Department of Pharmacy</div>
+            </div>
+            <div class="school-card">
+                <h3>College of Natural Resources & Environmental Studies</h3>
+                <div class="department">Department of Natural Resources</div>
+                <div class="department">Department of Environmental Studies</div>
+                <div class="department">Department of Wildlife Management</div>
+                <div class="department">Department of Fisheries</div>
+            </div>
+            <div class="school-card">
+                <h3>College of Veterinary Medicine</h3>
+                <div class="department">Department of Veterinary Medicine</div>
+                <div class="department">Department of Animal Science</div>
+                <div class="department">Department of Wildlife Management</div>
+                <div class="department">Department of Fisheries</div>
+            </div>
+            <div class="school-card">
+                <h3>College of Physical & Applied Sciences</h3>
+                <div class="department">Department of Physics</div>
+                <div class="department">Department of Chemistry</div>
+                <div class="department">Department of Mathematics</div>
+                <div class="department">Department of Geology</div>
+            </div>
+            <div class="school-card">
+                <h3>College of Architecture & Urban Planning</h3>
+                <div class="department">Department of Architecture</div>
+                <div class="department">Department of Urban Planning</div>
+                <div class="department">Department of Landscape Architecture</div>
+                <div class="department">Department of Interior Design</div>
+            </div>
+            <div class="school-card">
+                <h3>College of Music & Performing Arts</h3>
+                <div class="department">Department of Music</div>
+                <div class="department">Department of Dance</div>
+                <div class="department">Department of Drama</div>
+                <div class="department">Department of Film Studies</div>
+            </div>
+            <div class="school-card">
+                <h3>College of Journalism & Media Studies</h3>
+                <div class="department">Department of Journalism</div>
+                <div class="department">Department of Media Studies</div>
+                <div class="department">Department of Public Relations</div>
+                <div class="department">Department of Broadcasting</div>
+            </div>
+            <div class="school-card">
+                <h3>College of Languages & Linguistics</h3>
+                <div class="department">Department of English</div>
+                <div class="department">Department of Arabic</div>    
+                <div class="department">Department of French</div>
+                <div class="department">Department of Spanish</div>
+            </div>
+            <div class="school-card">
+                <h3>College of Political Science & Diplomacy</h3>
+                <div class="department">Department of Political Science</div>
+                <div class="department">Department of Diplomacy</div>
+                <div class="department">Department of International Relations</div>
+                <div class="department">Department of Peace Studies</div>
+            </div>
+            <div class="school-card">
+                <h3>College of Theology & Religious Studies</h3>
+                <div class="department">Department of Theology</div>
+                <div class="department">Department of Religious Studies</div>
+                <div class="department">Department of Islamic Studies</div>
+                <div class="department">Department of Christian Studies</div>
+            </div>
+            <button id="backToHomeFromSchools" class="back-home-btn" onclick="showSection('user-info')">Back to Home</button>
+        </div>
+        
+        <!-- Developers Section -->
+        <div id="developersSection" class="container" style="display:none;">
+            <h2 class="welcome-heading">Our Development Team</h2>
+            
+            <!-- Developer Cards with Images and Links -->
+            <div class="developer-card">
+                <a href="#" class="developer-link">
+                    <img src="badeng.jpg" alt="Badeng Lat" class="developer-image">
+                    <div class="font-bold">Badeng Lat</div>
+                    <div class="text-sm"></div>
+                </a>
+            </div>
+            
+            <div class="developer-card">
+                <a href="#" class="developer-link">
+                    <img src="Philip.jpg" alt="Phillip Mayom" class="developer-image">
+                    <div class="font-bold">Phillip Mayom</div>
+                    <div class="text-sm"></div>
+                </a>
+            </div>
+            
+            <div class="developer-card">
+                <a href="#" class="developer-link">
+                    <img src="Mary Angry.JPG" alt="Mary Anger" class="developer-image">
+                    <div class="font-bold">Mary Anger</div>
+                    <div class="text-sm"></div>
+                </a>
+            </div>
+            
+            <div class="developer-card">
+                <a href="#" class="developer-link">
+                    <img src="Buoi Abraham.JPG" alt="Buoi Abraham" class="developer-image">
+                    <div class="font-bold">Buoi Abraham</div>
+                    <div class="text-sm"></div>
+                </a>
+            </div>
+            
+            <div class="developer-card">
+                <a href="#" class="developer-link">
+                    <img src="Athony.jpg" alt="Anthony" class="developer-image">
+                    <div class="font-bold">Anthony Makuer</div>
+                    <div class="text-sm"></div>
+                </a>
+            </div>
+            <button id="backToHomeFromDevelopers" class="back-home-btn" onclick="showSection('user-info')">Back to Home</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 UNIVERSITY OF JUBA - AI Learning Tutor</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
