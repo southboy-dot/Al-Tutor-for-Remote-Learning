@@ -7,16 +7,15 @@
     --dark-text: #f0f0f0;
 }
 
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: var(--dark-bg);
     color: var(--light-bg);
-    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+    min-height: 100vh;
     display: flex;
-    flex-direction: column; /* Stack children vertically */
+    flex-direction: column;
 }
 
 header {
@@ -24,33 +23,34 @@ header {
     color: var(--dark-bg);
     padding: 10px;
     text-align: center;
-    margin-bottom: 20px; /* Add space below the header */
+    margin-bottom: 20px;
 }
+
 .head {
-    color:#181818;
+    color: #181818;
 }
 
 .logo {
     max-width: 70px;
     vertical-align: middle;
 }
-.h22{
+
+.h22 {
     color: #f9f9f9;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 p {
     color: whitesmoke;
 }
 
-h2 {
+h2, h3 {
     color: whitesmoke;
 }
-h3 {
-    color: whitesmoke;
-}
-.pp{
+
+.pp {
     color: wheat;
     display: flex;
 }
@@ -68,6 +68,7 @@ input {
     margin-bottom: 10px;
     transition: border 0.3s;
 }
+
 input:focus {
     border-color: #0070f3;
     outline: none;
@@ -84,26 +85,12 @@ input:focus {
     }
 }
 
-/* Background animation */
-@keyframes backgroundAnimation {
-    0% {
-        background-color: #f5f7fa;
-    }
-    50% {
-        background-color: #c3cfe2;
-    }
-    100% {
-        background-color: #f5f7fa;
-    }
-}
-
-.user-info , h1{
+.user-info, h1 {
     color: #181818;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 
 nav ul {
     background-color: var(--primary-color);
@@ -120,6 +107,9 @@ nav ul li {
 }
 
 nav ul li a {
+    gap: 1px;
+    border-radius: 25px;
+    font-size: 14px;
     font-weight: bold;
     color: white;
     text-decoration: none;
@@ -138,14 +128,13 @@ nav ul li a:hover {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 400px;
-    margin: 20px auto; /* Center horizontally and add margin at the top */
+    margin: 20px auto;
     animation: fadeIn 1s ease-in-out;
 }
 
 #answer-area {
     display: none;
-    /* Initially hidden */
-    background: (var(--light-bg));
+    background: var(--light-bg);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
@@ -163,7 +152,6 @@ nav ul li a:hover {
     border: 1px solid #181818;
     border-radius: 4px;
     max-height: 300px;
-    /* Limit height */
     color: #181818;
     background-color: #ffffff;
 }
@@ -203,41 +191,40 @@ nav ul li a:hover {
     border-color: #007bff;
     outline: none;
 }
-/* Adjust the send button styling */
+
 #sendbtn {
-    border: none; /* Remove default border */
-    padding: 10px 20px; /* Vertical and horizontal padding */
-    border-radius: 25px; /* Rounded corners */
-    background-color: #0070f3; /* Primary color */
-    color: white; /* Text color */
-    font-size: 16px; /* Font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s, transform 0.2s; /* Smooth hover effect */
-    margin: 20px auto; /* Centering the button */
-    display: block; /* Make it a block element for centering */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #0070f3;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 20px auto;
+    display: block;
 }
 
 #sendbtn:hover {
-    background-color: #0056b3; /* Darker shade on hover */
-    transform: translateY(-2px); /* Slight lift effect */
+    background-color: #0056b3;
+    transform: translateY(-2px);
 }
 
 #sendbtn:focus {
-    outline: none; /* Remove default outline */
+    outline: none;
 }
 
-/* Ensure input styling is consistent */
 #input {
     flex: 1;
     padding: 10px;
-    border: 2px solid #ccc; /* Ensure border is visible */
+    border: 2px solid #ccc;
     border-radius: 5px;
-    margin-right: 10px; /* Space between input and button */
+    margin-right: 10px;
     transition: border-color 0.3s;
 }
 
 #input:focus {
-    border-color: #0070f3; /* Change border color on focus */
+    border-color: #0070f3;
     outline: none;
 }
 
@@ -255,6 +242,7 @@ nav ul li a:hover {
 .submitbtn:hover {
     background-color: #0056b3;
 }
+
 .developer-card {
     padding: 1rem;
     border-radius: 8px;
@@ -263,26 +251,26 @@ nav ul li a:hover {
 }
 
 .developer-link {
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit text color */
-    display: flex; /* Align image and text horizontally */
-    align-items: center; /* Center items vertically */
-    gap: 1rem; /* Space between image and text */
-    padding: 1rem; /* Add padding for better click area */
-    border-radius: 8px; /* Match the card's border radius */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
 }
 
 .developer-link:hover {
-    background-color: rgba(0, 113, 243, 0.307); /* Light blue background on hover */
+    background-color: rgba(0, 113, 243, 0.307);
 }
 
 .developer-image {
-    width: 60px; /* Set image width */
-    height: 60px; /* Set image height */
-    border-radius: 50%; /* Make the image circular */
-    object-fit: cover; /* Ensure the image fits well */
-    border: 2px solid var(--primary-color); /* Add a border */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
 }
 
 .school-card {
@@ -303,25 +291,25 @@ nav ul li a:hover {
 }
 
 .back-home-btn {
-    background-color: #0070f3; /* Primary color */
-    color: white; /* Text color */
-    padding: 10px 20px; /* Vertical and horizontal padding */
-    border: none; /* Remove default border */
-    border-radius: 25px; /* Rounded corners */
-    font-size: 16px; /* Font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s, transform 0.2s; /* Smooth hover effect */
-    margin: 20px auto; /* Centering the button */
-    display: block; /* Make it a block element for centering */
+    background-color: #0070f3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 20px auto;
+    display: block;
 }
 
 .back-home-btn:hover {
-    background-color: #181818; /* Darker shade on hover */
-    transform: translateY(-2px); /* Slight lift effect */
+    background-color: #181818;
+    transform: translateY(-2px);
 }
 
 .back-home-btn:focus {
-    outline: none; /* Remove default outline */
+    outline: none;
 }
 
 footer {
@@ -329,9 +317,54 @@ footer {
     padding: 10px;
     background-color: #007bff;
     color: #f0f0f0;
-    margin-top: auto; /* Pushes the footer to the bottom */
-    width: 100%; /* Ensure it takes the full width */
+    margin-top: auto;
+    width: 100%;
 }
+
 footer p {
     color: #f0f0f0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 414px) { /* Target screens up to 414px */
+    header, footer {
+        padding: 5px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 1rem;
+        margin: 0; /* Remove margin for better fit */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Space between items */
+    }
+
+    #user-info, #answer-area {
+        width: 95%; /* Wider for smaller screens */
+        padding: 15px;
+    }
+
+    #sendbtn, .back-home-btn, .submitbtn {
+        width: 100%; /* Full width for buttons */
+        margin: 10px 0; /* Space between buttons */
+    }
+
+    #input-area {
+        flex-direction: column; /* Stack input and button */
+    }
+
+    #data-input {
+        margin-right: 0; /* No margin on smaller screens */
+        margin-bottom: 10px; /* Add space below */
+    }
+
+    .submitbtn {
+        margin-left: 0; /* Remove left margin for submit button */
+    }
+    
+    .developer-card, .school-card {
+        margin: 0.5rem; /* Reduce margin for smaller screens */
+    }
 }
